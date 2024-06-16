@@ -1,0 +1,21 @@
+package Assignment1;
+import java.util.*;
+public class lcm_and_gcd_of_a_no {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+       int A =sc.nextInt();
+       int B =sc.nextInt();
+       int oa=A;
+       int ob=B;
+        while(A%B!=0){
+           int rem=A%B;
+            A=B;
+            B=rem;
+            
+        }
+       int gcd=B;
+       int lcm=(oa*ob)/gcd;
+       int arr[] = {lcm,gcd};
+        System.out.print(Arrays.toString(arr));
+    }
+}
