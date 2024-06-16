@@ -1,0 +1,22 @@
+package Assignment1;
+import java.util.*;
+public class reverse_no {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+           
+        long ans = 0;
+
+        while (x != 0) {
+            ans = ans * 10 + x % 10;
+            x /= 10;
+        }
+        if (ans < Integer.MIN_VALUE || ans > Integer.MAX_VALUE) {
+            System.out.println(0);
+        } else {
+            System.out.println((int) ans);
+        }
+        
+        sc.close(); 
+    }
+}
