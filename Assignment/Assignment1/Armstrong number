@@ -1,0 +1,23 @@
+package Assignment1;
+import java.util.*;
+public class armstrong_number {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int On, rem, r = 0;
+        
+        On = n;
+
+        while (On != 0) {
+            rem = On % 10;
+            r += Math.pow(rem, 3);
+            On /= 10;
+        }
+
+        if(r == n) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
